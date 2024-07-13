@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Add Product</h2>
+<mat-dialog-content [formGroup]="addProductForm">
+  <!--reactive form-->
+
+  <mat-form-field class="field">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput formControlName="name">
+    <mat-hint> sample name help...</mat-hint>
+    <mat-error>
+      <!-- sample error message...  -->
+      {{getNameError()}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="field">
+    <mat-label>Price</mat-label>
+    <input type="text" matInput formControlName="price">
+    <mat-hint> sample name help...</mat-hint>
+    <mat-error>
+      <!-- sample error message...  -->
+      {{getPriceError()}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="field">
+    <mat-label>Description</mat-label>
+    <textarea type="text" matInput formControlName="name"></textarea>
+    <mat-hint> sample name help...</mat-hint>
+    <mat-error>
+      <!-- sample error message...  -->
+
+    </mat-error>
+  </mat-form-field>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <!-- actions (ok,cancel ,....) -->
+   <button mat-raised-button color="primary" (click)="save()"><mat-icon>save</mat-icon>save</button>
+   <button mat-raised-button color="secondary" (click)="cancel()"><mat-icon>cancel</mat-icon>Cancel</button>
+</mat-dialog-actions>

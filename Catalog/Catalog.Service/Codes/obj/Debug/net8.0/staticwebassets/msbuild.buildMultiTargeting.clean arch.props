@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\clean arch.props" />
+</Project>
